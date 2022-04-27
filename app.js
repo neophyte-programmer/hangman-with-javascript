@@ -77,3 +77,25 @@ function showNotification() {
 }
 
 // Keydown letter press
+window.addEventListener('keydown', e => {
+    if (e.keyCode >= 65 && e.keyCode <= 90) {
+        const letter = e.key
+        if (selectedWord.includes(letter)) {
+            if (!correctLettersArray.includes(letter)) {
+                correctLettersArray.push(letter)
+
+                displayWord()
+            } else {
+                showNotification()
+            }
+        } else {
+            if (!wrongLettersArray.includes(letter)) {
+                wrongLettersArray.push(letter)
+
+                updateWrongLetters()
+            } else {
+                showNotification()
+            }
+        }
+    }
+})
