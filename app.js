@@ -40,3 +40,29 @@ function displayWord() {
     }
 }
 
+// Update the wrong letters
+function updateWrongLetters() {
+    // Display wrong letters
+    wrongLetters.innerHTML = `
+        ${wrongLettersArray.length > 0 ? '<p>Wrong</p>' : ''}
+        ${wrongLettersArray.map(letter => `<span>${letter}</span>`)}
+    `
+
+    // Display parts
+    figureParts.forEach((part, index) => {
+        const errors = wrongLettersArray.length
+
+        if (index < errors) {
+            part.style.display = 'block'
+        } else {
+            part.style.display = 'none'
+        }
+    })
+
+    // Check if lost
+    if (wrongLettersArray.length === figureParts.length) {
+        finalMessageTitle.innerText = 'Unfortunately you lost'
+        finalMessageDescription.innerText = `The correct word was: ${selectedWord}`
+        popup.style.display = 'flex'
+    }
+}
