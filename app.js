@@ -99,3 +99,20 @@ window.addEventListener('keydown', e => {
         }
     }
 })
+
+// Restart game and play again
+playAgainBtn.addEventListener('click', () => {
+    // Empty arrays
+    correctLettersArray = []
+    wrongLettersArray = []
+
+    // Select new word
+    selectedWord = words[Math.floor(Math.random() * words.length)]
+
+    // Update the DOM
+    displayWord()
+    updateWrongLetters()
+
+    // Hide the popup
+    popup.style.display = 'none'
+})
