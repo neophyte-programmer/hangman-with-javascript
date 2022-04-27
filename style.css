@@ -10,3 +10,51 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 1rem;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    overflow: hidden;
+}
+
+.title-container {
+ background-color: aqua;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 1rem;
+}
+
+.game-container {
+ background-color: coral;
+ display: flex;
+ column-gap: 1rem;
+}
+
+.hangman-container {
+    background-color: bisque;
+    width: 33%;
+}
+
+.guess-container {
+    background-color: greenyellow;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrong-container {
+    background-color: red;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
