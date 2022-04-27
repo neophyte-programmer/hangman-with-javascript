@@ -116,3 +116,5 @@ playAgainBtn.addEventListener('click', () => {
     // Hide the popup
     popup.style.display = 'none'
 })
+
+displayWord()
