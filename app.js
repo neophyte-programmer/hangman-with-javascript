@@ -12,7 +12,7 @@ const figureParts = document.querySelectorAll('.figure-part')
 
 
 let selectedWord = words[Math.floor(Math.random() * words.length)]
-console.log(selectedWord)
+// console.log(selectedWord)
 
 let correctLettersArray = []
 let wrongLettersArray = []
