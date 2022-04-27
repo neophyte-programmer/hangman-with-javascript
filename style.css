@@ -18,7 +18,7 @@ body {
 .container {
     max-width: 100%;
     margin: 1rem;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,6 +38,7 @@ body {
 .game-container {
     display: flex;
     column-gap: 1rem;
+    height: 100%;
 }
 
 .hangman-container {
@@ -156,8 +157,9 @@ body {
     border-radius: 10px 10px 0 0;
     padding: 15px 20px;
     position: absolute;
-    bottom: -50px;
+    bottom: 0;
     transition: transform .4s ease;
+    visibility: hidden;
 }
 
 .notification-container p {
@@ -166,5 +168,5 @@ body {
 }
 
 .notification-container.show {
-    transform: translateY(-50px);
+    visibility: visible;
 }
